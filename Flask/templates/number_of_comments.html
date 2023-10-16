@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+
+  <link href="static/assets/img/favicon.png" rel="icon">
+    <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+   <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="static/assets/css/style.css" rel="stylesheet"> 
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+</head>
+<body style="height: 100%; margin: 0">
+  
+
+ <!-- ======= Header ======= -->
+ <header id="header" class="d-flex align-items-center " >
+  <div class="container-fluid container-xxl d-flex align-items-center" > 
+
+      <div id="logo" class="me-auto">
+     
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="nav-link scrollto active" href="#index.html">Home</a></li>
+        <li><a class="nav-link scrollto" href="sentiment_graphic.html">Sentiments of All Brands</a></li>
+        <li><a class="nav-link scrollto" href="number_of_comments.html">Number of Comments</a></li>
+        <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
+        <li><a class="nav-link scrollto" href="#venue">Venue</a></li>
+        <li><a class="nav-link scrollto" href="#hotels">Hotels</a></li>
+        <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
+        <li><a class="nav-link scrollto" href="#supporters">Sponsors</a></li>
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a class="buy-tickets scrollto" href="#buy-tickets">Buy Tickets</a>
+
+  </div>
+  </header><!-- End Header -->
+  <div id="number" style="height: 100%"></div>
+  
+  <script type="text/javascript">
+    var dom = document.getElementById('number');
+    var myChart = echarts.init(dom, 'dark', {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    // prettier-ignore
+let dataAxis =['Alfa Romeo',
+ 'Audi',
+ 'Bmw',
+ 'Chevrolet',
+ 'Citroen',
+ 'Dacia',
+ 'Diğer Markalar',
+ 'Fiat',
+ 'Ford',
+ 'Honda',
+ 'Hyundai',
+ 'Jeep',
+ 'Kia',
+ 'Mazda',
+ 'Mercedes',
+ 'Mitsubishi',
+ 'Nissan',
+ 'Opel',
+ 'Peugeot',
+ 'Renault',
+ 'Seat',
+ 'Skoda',
+ 'Subaru',
+ 'Suzuki',
+ 'Tesla',
+ 'TOGG',
+ 'Toyota',
+ 'Volvo',
+ 'Vw'];
+// prettier-ignore
+let data =[257,
+ 742,
+ 485,
+ 14,
+ 1979,
+ 234,
+ 1451,
+ 487,
+ 324,
+ 324,
+ 705,
+ 39,
+ 552,
+ 70,
+ 361,
+ 119,
+ 304,
+ 301,
+ 1531,
+ 581,
+ 915,
+ 201,
+ 14,
+ 253,
+ 2759,
+ 94,
+ 505,
+ 77,
+ 1871];
+let yMax = 500;
+let dataShadow = [];
+for (let i = 0; i < data.length; i++) {
+  dataShadow.push(yMax);
+}
+option = {
+  title: {
+    text: '特性示例：渐变色 阴影 点击缩放',
+    subtext: 'Feature Sample: Gradient Color, Shadow, Click Zoom'
+    
+  },
+  xAxis: {
+    data: dataAxis,
+    axisLabel: {
+      inside: true,
+      color: '#fff'
+    },
+    axisTick: {
+      show: false
+    },
+    axisLine: {
+      show: false
+    },
+    z: 10,
+    type: 'category',
+    axisLabel: { interval: 0, rotate: 30 }
+  },
+  yAxis: {
+    axisLine: {
+      show: false
+    },
+    axisTick: {
+      show: false
+    },
+    axisLabel: {
+      color: '#999'
+    }
+  },
+  grid: { top: '12%' },
+  dataZoom: [
+    {
+      type: 'inside'
+    }
+  ],
+  series: [
+    {
+      name: 'hey',
+      type: 'bar',
+      showBackground: true,
+      itemStyle: {
+        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          { offset: 0, color: '#83bff6' },
+          { offset: 0.5, color: '#188df0' },
+          { offset: 1, color: '#188df0' }
+        ])
+      },
+      emphasis: {
+        itemStyle: {
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+            { offset: 0, color: '#2378f7' },
+            { offset: 0.7, color: '#2378f7' },
+            { offset: 1, color: '#83bff6' }
+          ])
+        }
+      },
+      data: data
+    }
+  ]
+};
+// Enable data zoom when user click bar.
+const zoomSize = 6;
+myChart.on('click', function (params) {
+  console.log(dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)]);
+  myChart.dispatchAction({
+    type: 'dataZoom',
+    startValue: dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)],
+    endValue:
+      dataAxis[Math.min(params.dataIndex + zoomSize / 2, data.length - 1)]
+  });
+});
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+
+ 
+</body>
+</html>

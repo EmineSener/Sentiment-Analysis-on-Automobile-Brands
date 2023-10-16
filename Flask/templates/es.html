@@ -1,0 +1,98 @@
+
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=doc-example%2Ftutorial-async&theme=dark&code=GYVwdgxgLglg9mABMAplCALAIgQyjgCggCMBKRAbwChFEB6OxQLATBx-MQGc0AVGAWxTggoiQIRWgfaNAQPqBTa0AFSoF94mh258BQgqEiwEiAuWq1aJAvoOG8KAOZwATjBTsAXIgDaAcn7WIKVwBpErjAtff0BrCODXQBOIwAVtcMANrMB92MBo9PDAHIiYn3cUTxQAE3twwCj_QG3rML9XQCu0wC6_Uv9ouKTUmIBdH0VTHLwcJ2cARj8AJgAGPwBmADY_HsHhxCmZoYGZ8cnplfn10YnZ1e2NxAXEZd21xaa2xABfUgBuRQu1wZuqC6oGREBcJUBpzUQ4AActMBUP4AxAAXkoilgUAANignCZaFAUAAPKBOVwSABWGGAGExQTurURcDg0Ngv3h90UsIsKDAOXh5w6-G6rkAAKmAecTXGdaFTaMiAILImCOCHtTrdHmXImIACeQpFlJlnFs9m65wRBjAOH46LZFgNXJlpigst-cP8xBw1l851ozK6LilvMUZwut1Q6GwnXU4Gg8CQBAdekUvFlAGEMNaoAA6ThQADy_wDxnOguFos19oliAdMYg5isqvY5z5BhVdlFzjtYtMBjegE4LQB2xoBYFUA6tqAT-1ACl6gAYlQAfbl3ACFugG-fQDoSjXaNrdf5Oba6wYHU48w6ay9TFKrrdN0A
+	⚠ Please be aware that this chart is not an official demo of Apache ECharts but is made by user-generated code.
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, 'dark', {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    function fetchData(cb) {
+  // 通过 setTimeout 模拟异步加载
+  setTimeout(function () {
+    cb({
+      categories: ['mercedes', 'Vw', '衫', '裤子', '高跟鞋', '袜子','mercedes', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子','merce', 'hg', '衫', '裤子', '高跟鞋', '袜子','mercedes', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子', '袜子','mercedes', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
+      data: [1, 20, 36, 100, 100, 20, 20, 36, 100, 100, 20, 20, 36, 100, 100, 20, 20, 36, 100, 100, 20, 20, 20, 36, 100, 100, 20,12,12]
+    });
+  }, 1000);
+}
+// 初始 option
+option = {
+  title: {
+    text: '异jhfhjg'
+  },
+  tooltip: {},
+  legend: {
+    data: ['ne']
+  },
+  xAxis: {
+    data: []
+  },
+  yAxis: {},
+  series: [
+    {
+      name: '销ggg量',
+      type: 'bar',
+      data: []
+    }
+  ]
+};
+fetchData(function (data) {
+  myChart.setOption({
+    xAxis: {
+      data: data.categories,
+      type: 'category',
+    axisLabel: { interval: 0, rotate: 30 }
+    },
+    series: [
+      {
+        // 根据名字对应到相应的系列
+        name: 'hey',
+        data: data.data
+      }
+    ]
+  });
+});
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
