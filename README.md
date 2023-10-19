@@ -43,6 +43,36 @@ Sentiment Analysis on Automobile Brands is a project that offers the following k
 
 ## Installation
 
+If you have Git installed on your computer, clone the repo.
+
+Go to the directory you want to clone.For example Desktop:
+
+```bash
+cd ~/Desktop
+```
+
+Clone the repostory.
+
+```bash
+git clone https://github.com/EmineSener/Sentiment-Analysis-on-Automobile-Brands
+```
+
+If you are not using git, after clicking the green `Code` button at the top right of the repository, select the `Download ZIP` option, and the project source code will be downloaded to your local computer.
+
+
+Open a command line and enter the project folder.
+
+Install the required packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+To run it:
+
+```bash
+python app.py
+```
 
 ## Usage
 
