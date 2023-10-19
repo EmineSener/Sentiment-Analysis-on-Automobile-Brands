@@ -3,6 +3,11 @@
 
 Sentiment Analysis on Automobile Brands is a sentiment analysis project that that helps you gain insights from text data by analyzing and classifying as negative, neutral or positive the sentiment expressed within the text.
 
+The project analyzes and visualizes the sentiment of automobile brands by analyzing the comments on the DonanımHaber forum site.
+The reviews in the DonanımHaber list are real-time and unlabelled comments.
+
+![GitHub Logo](https://github.com/yourusername/yourrepository/blob/main/path/to/your/image.png)
+
 ## Description
 Sentiment Analysis on Automobile Brands is a project that offers the following key features:
 
