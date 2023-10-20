@@ -97,6 +97,7 @@ To run cells in Jupyter Notebook, click on the cells and press "Shift+Enter".
 
 
 ## Documentation
+
 ### [Web Scraping](./WebScraping/)
 
 I collected the reviews needed to train and test the model from the `DonanımHaber` news site with [create_dataset.ipynb](./WebScraping/create_dataset.ipynb/) in this folder.
@@ -123,11 +124,26 @@ Preprocessing is cleaning and transforming unstructured text data to prepare it 
 The preprocessing steps involve removing punctuation marks, stop words, non-sentiment phrases, URLs, and numbers. Additionally, all letters are converted to lowercase, and time information is transformed into a date format to prepare the data for analysis. In the [preprocessing](./MachineLearning/data_preprocessing
 .ipynb) , explanations were provided for the necessity of these operations in sentiment analysis.
 
-You can prepare your raw dataset for natural language processing with the [preprocessing](./MachineLearning/data_preprocessing.ipynb) tool, or you can use [my preprocessed data](https://drive.google.com/file/d/1XM762OaeK4O3fQyjPtUkLBgz1jptI2tr/view?usp=sharing).
+You can prepare your raw dataset for natural language processing with the [preprocessing](./MachineLearning/data_preprocessing.ipynb) tool, or you can use [my preprocessed dataset](https://drive.google.com/file/d/1XM762OaeK4O3fQyjPtUkLBgz1jptI2tr/view?usp=sharing).
 
 
+#### Data Annotation
+
+The comments on the DonanımHaber site lack sentiment tags. If the comments had a star rating feature like other websites, we could easily categorize them based on their star ratings. 
+
+Since we don't have any data other than the text itself, we must rely on the textual context to label the comments as negative, positive, or neutral. 
+
+To achieve this, we employed two different approaches:
+
+1.[Data Annotation with OpenAI API](./MachineLearning/data_annotation_openai.ipynb)
+
+If you are using the free version of OpenAI, you won't be able to send prompts continuously. The free version encounters an error in approximately 20 seconds. That's why we wait for 20 seconds when an error occurs. However, this approach proved to be very time-consuming when applied to the entire dataset, so we couldn't label the dataset using this method.
+When I compare a few comments I labeled using the OPENAI API with the alternative approach, I can confidently say that this method provides more accurate results.
 
 
+2.[Data Annotation with FLAN](./MachineLearning/data_annotation_openai.ipynb)
+
+However, it can be stated that manual tagging is the most trustworthy approach for labeling text
 
 
 
