@@ -111,7 +111,7 @@ You can customize settings for your own dataset using the information provided i
 
 You can also download the data required for analysis via [create_dataset.ipynb](./WebScraping/create_dataset.ipynb/).
 
-If you don't want to run for analyse data,you can download [my analyze data](./WebScraping/Scores).
+If you don't want to run for analyse data,you can download [my analyze data](./WebScraping/Brands).
 
 
 
