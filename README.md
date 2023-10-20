@@ -97,9 +97,9 @@ To run cells in Jupyter Notebook, click on the cells and press "Shift+Enter".
 
 
 ## Documentation
-### [Web Scraping](./Web Scraping/)
+### [Web Scraping](./WebScraping/)
 
-I collected the reviews needed to train and test the model from the `DonanımHaber` news site with [create_dataset.ipynb](./Web Scraping/create_dataset.ipynb/) in this folder.
+I collected the reviews needed to train and test the model from the `DonanımHaber` news site with [create_dataset.ipynb](./WebScraping/create_dataset.ipynb/) in this folder.
 
 Creating the dataset from scratch may be time-consuming.You can utilize my dataset.My dataset is quite large, which is why I haven't uploaded it to GitHub. 
 
@@ -109,9 +109,9 @@ If you want to create your own dataset, run [create_dataset.ipynb](./Web Scrapin
 
 You can customize settings for your own dataset using the information provided in the notebook.
 
-You can also download the data required for analysis via [create_dataset.ipynb](./Web Scraping/create_dataset.ipynb/).
+You can also download the data required for analysis via [create_dataset.ipynb](./WebScraping/create_dataset.ipynb/).
 
-If you don't want to run for analyse data,you can download [my analyze data](./Web Scraping/Scores).
+If you don't want to run for analyse data,you can download [my analyze data](./WebScraping/Scores).
 
 
 
