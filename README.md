@@ -106,7 +106,7 @@ Creating the dataset from scratch may be time-consuming.You can utilize my datas
 
 You can download [dataset](https://drive.google.com/file/d/1Gr8_PRvZZS3irgXelXMa5PMjCRzyYqZi/view?usp=sharing)
 
-If you want to create your own dataset, run [create_dataset.ipynb](./Web Scraping/create_dataset.ipynb/).
+If you want to create your own dataset, run [create_dataset.ipynb](./WebScraping/create_dataset.ipynb/).
 
 You can customize settings for your own dataset using the information provided in the notebook.
 
