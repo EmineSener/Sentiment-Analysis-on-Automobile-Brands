@@ -113,6 +113,14 @@ You can also download the data required for analysis via [create_dataset.ipynb](
 
 If you don't want to run for analyse data,you can download [my analyze data](./WebScraping/Brands).
 
+### [Machine Learning](./MachineLearning/)
+
+In this section, we apply machine learning techniques to perform natural language processing in Turkish.
+
+#### [Preprocessing](./MachineLearning/data_preprocessing.ipynb)
+
+
+
 
 
 
