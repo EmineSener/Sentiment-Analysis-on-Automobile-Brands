@@ -121,8 +121,7 @@ In this section, we apply machine learning techniques to perform natural languag
 #### [Preprocessing](./MachineLearning/data_preprocessing.ipynb)
 Preprocessing is cleaning and transforming unstructured text data to prepare it for analysis. It includes removing punctstemming, lemmatization, stop-word removal, and part-of-speech tagging.
 
-The preprocessing steps involve removing punctuation marks, stop words, non-sentiment phrases, URLs, and numbers. Additionally, all letters are converted to lowercase, and time information is transformed into a date format to prepare the data for analysis. In the [preprocessing](./MachineLearning/data_preprocessing
-.ipynb) , explanations were provided for the necessity of these operations in sentiment analysis.
+The preprocessing steps involve removing punctuation marks, stop words, non-sentiment phrases, URLs, and numbers. Additionally, all letters are converted to lowercase, and time information is transformed into a date format to prepare the data for analysis. In the [preprocessing](./MachineLearning/data_preprocessing.ipynb) , explanations were provided for the necessity of these operations in sentiment analysis.
 
 You can prepare your raw dataset for natural language processing with the [preprocessing](./MachineLearning/data_preprocessing.ipynb) tool, or you can use [my preprocessed dataset](https://drive.google.com/file/d/1XM762OaeK4O3fQyjPtUkLBgz1jptI2tr/view?usp=sharing).
 
