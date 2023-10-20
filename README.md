@@ -7,10 +7,11 @@ Sentiment Analysis on Automobile Brands is a sentiment analysis project that tha
 
 1. [Introduction](#introduction)
 2. [Installation](#installation)
-3. [Usage](#usage)
-4. [Features](#features)
-5. [Contributing](#contributing)
-6. [License](#license)
+3. [Documentation](#documentation)
+4. [Usage](#usage)
+5. [Features](#features)
+6. [Contributing](#contributing)
+7. [License](#license)
 
 ## Introduction
 
@@ -73,6 +74,49 @@ To run it:
 ```bash
 python app.py
 ```
+
+## Usage 
+
+When you run the project, you can view the results of the model that has been trained with the data I collected previously. 
+
+However, this project offers more than just that. You have the option to create your dataset by collecting the latest comments and then train the model using your dataset.
+
+Afterward, you can analyze and view the results.
+
+You will need jupyter notebook for this.
+
+Open the terminal and go to the directory where the project is located.
+
+Start the Jupyter Notebook server:
+
+```bash
+   jupyter notebook
+```
+
+To run cells in Jupyter Notebook, click on the cells and press "Shift+Enter".
+
+
+## Documentation
+### [Web Scraping](./Web Scraping/)
+
+I collected the reviews needed to train and test the model from the `DonanımHaber` news site with [create_dataset.ipynb](./Web Scraping/create_dataset.ipynb/) in this folder.
+
+Creating the dataset from scratch may be time-consuming.You can utilize my dataset.My dataset is quite large, which is why I haven't uploaded it to GitHub. 
+
+You can download [dataset](https://drive.google.com/file/d/1Gr8_PRvZZS3irgXelXMa5PMjCRzyYqZi/view?usp=sharing)
+
+If you want to create your own dataset, run [create_dataset.ipynb](./Web Scraping/create_dataset.ipynb/).
+
+You can customize settings for your own dataset using the information provided in the notebook.
+
+You can also download the data required for analysis via [create_dataset.ipynb](./Web Scraping/create_dataset.ipynb/).
+
+If you don't want to run for analyse data,you can download [my analyze data](./Web Scraping/Scores).
+
+
+
+
+
 
 ## Usage
 
