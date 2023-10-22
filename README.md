@@ -141,9 +141,13 @@ When I compare a few comments I labeled using the OPENAI API with the alternativ
 
 
 2.[Data Annotation with FLAN](./MachineLearning/data_annotation_with_FLAN.ipynb)
-The FLAN-T5 base model was used in the context of sentiment analysis. Originally, the FLAN-T5 base model was created as a pre-trained model for text summarization. To make it suitable for sentiment analysis, the model underwent fine-tuning, involving adjustments to numerous parameters, using a [labeled dataset](https://drive.google.com/file/d/1rb8qfDnBeYOvXsB6LtHCeqKt5pm7HFEe/view?usp=share_link).
+
+The FLAN-T5 base model was used in the context of sentiment analysis. Originally, the FLAN-T5 base model was created as a pre-trained model for text summarization. To make it suitable for sentiment analysis, the model underwent fine-tuning, involving adjustments to numerous parameters, using a [labelled dataset](https://drive.google.com/file/d/1rb8qfDnBeYOvXsB6LtHCeqKt5pm7HFEe/view?usp=share_link).
 
 The labeled dataset used in this context was not generated through web scraping. It was pre-existing and obtained from https://www.kaggle.com/datasets/seymasa/turkish-sales-comments/data.
+
+
+
 
 You have the option to label the unlabeled dataset, which was generated through web scraping, using [data annotation with FLAN](./MachineLearning/data_annotation_with_FLAN.ipynb). Alternatively, you can also download [my dataset](https://drive.google.com/file/d/1tqD2HD2b4Xv13rpqNcS9vK7qhZ1Lr-f6/view?usp=share_link) that has been labeled with FLAN.
 
