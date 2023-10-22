@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Sentiment Analyse</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="static/assets/img/favicon.png" rel="icon">
+    <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="static/assets/css/style.css" rel="stylesheet">
+
+    <style>
+      
+    </style>
+
+    </head>
+    <body style="background-color: #100C2A">
+        
+        
+        <!-- ======= Header ======= -->
+        <header id="header" class="d-flex align-items-center ">
+          <div class="container-fluid container-xxl d-flex align-items-center">
+  
+              <div id="logo" class="me-auto">
+              <!-- Uncomment below if you prefer to use a text logo -->
+              <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
+             
+              </div>
+  
+              <nav id="navbar" class="navbar order-last order-lg-0">
+              <ul>
+                  <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                  <li><a class="nav-link scrollto" href="/sentiment_graphic">Sentiments of All Brands</a></li>
+                  <li><a class="nav-link scrollto" href="/number_of_comments">Number of Comments</a></li>
+                  <li><a class="nav-link scrollto" href="/brands">Brands</a></li>
+              </ul>
+              <i class="bi bi-list mobile-nav-toggle"></i>
+              </nav><!-- .navbar -->
+              <a class="buy-tickets scrollto" href="/contact">Contact</a>
+  
+          </div>
+          </header><!-- End Header -->
+
+        <!-- ======= Speakers Section ======= -->
+    <section id="speakers" >
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <h2 style="color:white">Automobiles</h2>
+            <p>Here are some of brands</p>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+                <img src="static/assets/img/volvo.jpg" alt="Brand 1" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Volvo">Volvo</a></h3>
+                  <div class="social">
+                    <a href="https://www.volvocars.com/tr/"><i class="bi bi-google"></i></a>
+                    <a href="https://www.instagram.com/volvocartr/"><i class="bi bi-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                <img src="static/assets/img/bmw.jpg" alt="Brand 2" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Bmw">Bmw</a></h3>
+                  <div class="social">
+                    <a href=""><i class="bi bi-google"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+                <img src="static/assets/img/audi.jpg" alt="Speaker 3" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Audi">Audi</a></h3>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                <img src="static/assets/img/tesla.jpg" alt="Speaker 5" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Tesla">Tesla</a></h3>
+                  <div class="social">
+                    <a href="https://www.instagram.com/teslamotors/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.tesla.com/tr_tr"><i class="bi bi-google"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+                <img src="static/assets/img/mercedes.jpg" alt="Brands 4" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Mercedes">Mercedes</a></h3>
+                  <div class="social">
+                    <a href="https://www.instagram.com/mercedesbenz/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.mercedesbenzturk.com.tr/"><i class="bi bi-google"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+                <img src="static/assets/img/Vw.jpg" alt="Brand 6" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Volkswagen">Volkswagen</a></h3>
+                  <div class="social">
+                    <a href="https://www.instagram.com/vwturkiye/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.vw.com.tr/"><i class="bi bi-google"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                <img src="static/assets/img/citroen.png" alt="Speaker 5" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Citroen">Citroen</a></h3>
+                  <div class="social">
+                    <a href="https://www.instagram.com/citroenturkiye/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.citroen.com.tr/"><i class="bi bi-google"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                <img src="static/assets/img/fiat.png" alt="Speaker 5" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Fiat">Fiat</a></h3>
+                  <div class="social">
+                    <a href="https://www.instagram.com/fiat_tr/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.fiat.com.tr/"><i class="bi bi-google"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                <img src="static/assets/img/opel.jpg" alt="Speaker 5" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Opel">Opel</a></h3>
+                  <div class="social">
+                    <a href="https://www.instagram.com/opelturkiye/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.opel.com.tr/"><i class="bi bi-google"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                <img src="static/assets/img/renault.png" alt="Speaker 5" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Renault">Renault</a></h3>
+                  <div class="social">
+                    <a href="https://www.instagram.com/renaultturkiye/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.renault.com.tr/"><i class="bi bi-google"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                <img src="static/assets/img/peugeot.jpg" alt="Speaker 5" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Peugeot">Peugeot</a></h3>
+                  <div class="social">
+                    <a href="https://www.instagram.com/peugeotturkiye/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.peugeot.com.tr/"><i class="bi bi-google"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                <img src="static/assets/img/ford.png" alt="Speaker 5" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Ford">Ford</a></h3>
+                  <div class="social">
+                    <a href="https://www.instagram.com/fordturkiye/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.ford.com.tr/"><i class="bi bi-google"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                <img src="static/assets/img/nissan.jpg" alt="Speaker 5" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Nissan">Nissan</a></h3>
+                  <div class="social">
+                    <a href="https://www.instagram.com/nissanturkiye/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.nissan.com.tr/"><i class="bi bi-google"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                <img src="static/assets/img/toyota.png" alt="Speaker 5" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Toyota">Toyota</a></h3>
+                  <div class="social">
+                    <a href="https://www.instagram.com/toyota_turkiye/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.toyota.com.tr/"><i class="bi bi-google"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                <img src="static/assets/img/dacia.jpg" alt="Speaker 5" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Dacia">Dacia</a></h3>
+                  <div class="social">
+                    <a href="https://www.instagram.com/daciaturkiye/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.dacia.com.tr/"><i class="bi bi-google"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                <img src="static/assets/img/honda.jpg" alt="Speaker 5" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Honda">Honda</a></h3>
+                  <div class="social">
+                    <a href="https://www.instagram.com/hondatr/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.honda.com.tr/"><i class="bi bi-google"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                <img src="static/assets/img/dacia.jpg" alt="Speaker 5" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/Kia">Kia</a></h3>
+                  <div class="social">
+                    <a href="https://www.instagram.com/kiaturkiye/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.kia.com/tr"><i class="bi bi-google"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                <img src="static/assets/img/togg.jpg" alt="Speaker 5" class="img-fluid">
+                <div class="details">
+                  <h3><a href="/TOGG">TOGG</a></h3>
+                  <div class="social">
+                    <a href="https://www.instagram.com/toggturkey/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.togg.com.tr/"><i class="bi bi-google"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+  
+      </section><!-- End Speakers Section -->
+
+        <!-- Vendor JS Files -->
+        <script src="static/assets/vendor/aos/aos.js"></script>
+        <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="static/assets/vendor/php-email-form/validate.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="static/assets/js/main.js"></script>
+       
+    </body>
+</html>
+
+
+

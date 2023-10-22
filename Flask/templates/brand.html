@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+
+</head>
+<body style="background-color: #100C2A;height: 100%;width:50% ;margin: 0">
+  <!-- <img src="static/assets/img/volvo.jpg" style="display: inline;position: absolute; top: 10%; left: 10%;width: 40%;border-radius: 30%;" alt=""> -->
+<!-- ======= Header ======= -->
+<header id="header" class="d-flex align-items-center ">
+  <div class="container-fluid container-xxl d-flex align-items-center">
+
+      <div id="logo" class="me-auto">
+      <!-- Uncomment below if you prefer to use a text logo -->
+      <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
+     
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/sentiment_graphic">Sentiments of All Brands</a></li>
+          <li><a class="nav-link scrollto" href="/number_of_comments">Number of Comments</a></li>
+          <li><a class="nav-link scrollto" href="/brands">Brands</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a class="buy-tickets scrollto" href="/contact">Contact</a>
+
+  </div>
+  </header><!-- End Header -->
+
+  <section id="hero" style="background-color: #100C2A;height: 30%;width:100% ;position: absolute; bottom: 0; right: 0;  padding: 0;">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <h1 class="mb-4 pb-0">{{brand}}</h1>
+    </div> 
+  </section><!-- End Hero Section-->
+  <div id="score" style="height: 70%;width:40%;position: absolute; top: 0; left: 0;  padding: 0;"></div>
+  
+
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+  <script type="text/javascript">
+    var dom = document.getElementById('score');
+    var myChart = echarts.init(dom, 'dark', {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    let sentiment = {{ sentiment|tojson|safe }};
+    let graphic = {{ graphic|tojson|safe }};
+    var option;
+
+    option = {
+  series: [
+    {
+      type: 'gauge',
+      startAngle: 180,
+      endAngle: 0,
+      center: ['50%', '75%'],
+      radius: '90%',
+      min: 0,
+      max: 1,
+      splitNumber: 8,
+      axisLine: {
+        lineStyle: {
+          width: 6,
+          color: [
+            [0.33, '#FF6E76'],
+            [0.66, '#FDDD60'],
+            [1, '#7CFFB2']
+          ]
+        }
+      },
+      pointer: {
+        icon: 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
+        length: '12%',
+        width: 20,
+        offsetCenter: [0, '-60%'],
+        itemStyle: {
+          color: 'auto'
+        }
+      },
+      axisTick: {
+        length: 12,
+        lineStyle: {
+          color: 'auto',
+          width: 2
+        }
+      },
+      splitLine: {
+        length: 20,
+        lineStyle: {
+          color: 'auto',
+          width: 5
+        }
+      },
+      axisLabel: {
+        color: '#464646',
+        fontSize: 20,
+        distance: -60,
+        rotate: 'tangential',
+        formatter: function (value) {
+          if (value === 0.875) {
+            return 'Positive';
+          } else if (value === 0.500) {
+            return 'Neurtal';
+          } else if (value === 0.125) {
+            return 'Negative';
+          }
+          return '';
+        }
+      },
+      title: {
+        offsetCenter: [0, '-10%'],
+        fontSize: 20
+      },
+      detail: {
+        fontSize: 30,
+        offsetCenter: [0, '-35%'],
+        valueAnimation: true,
+        formatter: function (value) {
+          return Math.round(value * 100) + '';
+        },
+        color: 'inherit'
+      },
+      data: [
+        {
+          value: sentiment,
+          name: 'Sentiment Score'
+        }
+      ]
+    }
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+
+<div id="sentiments" style="height: 70%;width:40%;position: absolute; top: 0; right: 10%;  padding: 0;"></div>
+<script type="text/javascript">
+  var dom = document.getElementById('sentiments');
+  var myChart = echarts.init(dom, 'dark', {
+    renderer: 'canvas',
+    useDirtyRect: false,
+  //   width: 1280,
+  // height: 900
+  });
+  var app = {};
+  
+  var option;
+
+  setTimeout(function () {
+option = {
+  legend: {
+
+orient: 'vertical',
+left: 2,
+top:70
+},
+  tooltip: {
+    trigger: 'axis',
+    showContent: true
+  },
+  dataset: {
+    source: graphic
+     
+    
+  },
+  xAxis: { type: 'category' },
+  yAxis: { gridIndex: 0 },
+  grid: { top: '12%' },
+  series: [
+    
+    {
+      type: 'line',
+      smooth: true,
+      seriesLayoutBy: 'row',
+      emphasis: { focus: 'series'
+      ,
+    },
+      color : 'blue'
+      
+    },
+    
+
+  ]
+};
+myChart.on('updateAxisPointer', function (event) {
+  const xAxisInfo = event.axesInfo[0];
+  // console.log(xAxisInfo)
+  if (xAxisInfo) {
+    const dimension = xAxisInfo.value + 1;
+    
+    myChart.setOption({
+    
+      series: {
+        id: 'pie',
+        label: {
+          formatter: '{b}: {@[' + dimension + ']} ({d}%)'
+        },
+        encode: {
+          value: dimension,
+          tooltip: dimension
+        }
+      }
+    });
+    
+    
+  }
+});
+myChart.setOption(option);
+});
+
+  if (option && typeof option === 'object') {
+    myChart.setOption(option);
+  }
+  
+  window.addEventListener('resize', myChart.resize);
+</script>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/aos/aos.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+</body>
+</html>
