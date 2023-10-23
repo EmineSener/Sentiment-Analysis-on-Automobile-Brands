@@ -155,6 +155,22 @@ You have the option to label the unlabeled dataset, which was generated through 
 However, it can be stated that manual tagging is the most trustworthy approach for labeling text.
 
 
+#### Create Model and Feature Extraction with BERT
+
+The pre-trained Turkish BERT model is utilized for performing sentiment analysis in Turkish.
+
+With [create_model.ipynb](./MachineLearning/create_model.ipynb), you can train and save a model for performing sentiment analysis on Turkish texts.
+
+During this process, feature extraction was performed using the `BERT` model, and the data were converted into tensors to be fed into the model.
+
+The model was then created and trained using the `Keras.Sequential()` function.
+
+Finally, the model results were visualized.
+
+Each stage is explained in detail in '[create_model.ipynb](./MachineLearning/create_model.ipynb)' and I recommend that you read it.
+
+[create_model.ipynb](./MachineLearning/create_model.ipynb) may take some time to run, but since the model is saved as [best_model.h5](./MachineLearning/best_model.h5) after training, you can use the model multiple times without the need to train it again.
+
 ## Usage
 
 This is the usage section.
