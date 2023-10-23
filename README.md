@@ -167,9 +167,9 @@ The model was then created and trained using the `Keras.Sequential()` function.
 
 Finally, the model results were visualized.
 
-Each stage is explained in detail in [create_model_with_bert.ipynb](./MachineLearning/./MachineLearning/create_model_with_bert.ipynb) and I recommend that you read it.
+Each stage is explained in detail in [create_model_with_bert.ipynb](./MachineLearning/create_model_with_bert.ipynb) and I recommend that you read it.
 
-[create_model_with_bert.ipynb](./MachineLearning/./MachineLearning/create_model_with_bert.ipynb) may take some time to run, but since the model is saved as [best_model.h5](./MachineLearning/best_model.h5) after training, you can use the model multiple times without the need to train it again.
+[create_model_with_bert.ipynb](./MachineLearning/create_model_with_bert.ipynb) may take some time to run, but since the model is saved as [best_model.h5](./MachineLearning/best_model.h5) after training, you can use the model multiple times without the need to train it again.
 
 ## Usage
 
