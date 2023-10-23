@@ -171,6 +171,20 @@ Each stage is explained in detail in [create_model_with_bert.ipynb](./MachineLea
 
 [create_model_with_bert.ipynb](./MachineLearning/create_model_with_bert.ipynb) may take some time to run, but since the model is saved as [best_model.h5](./MachineLearning/best_model.h5) after training, you can use the model multiple times without the need to train it again.
 
+
+#### Sentiment Analyse 
+
+The model is loaded, and sentiment analysis is conducted on comments obtained through separate web scraping processes for each brand. 
+
+The resulting sentiment scores are organized based on the date of the comments. 
+
+Additionally, the analysis calculates the number of comments made on each day. 
+
+The outcomes are visualized using Matplotlib and saved for potential use in various plots within the web application
+
+You can perform sentiment analysis by running the [sentiment_analyse.ipynb](./MachineLearning/sentiment_analyse.ipynb) file.
+
+The results obtained are saved in the [Scores](./MachineLearning/Scores) directory.
 ## Usage
 
 This is the usage section.
