@@ -221,17 +221,30 @@ The results have been stored in the [GraphicData](./MachineLearning/GraphicData)
 
 Here are a few analysis charts.
 
+
+
 1.Graph showing daily sentiment scores of all brands.
+
+
 
 ![GitHub Logo](https://github.com/EmineSener/Sentiment-Analysis-on-Automobile-Brands/blob/main/readme/sentiment_graphic.png)
 
+
+
 2.A graph displaying the total comments for each brand.
+
 
 ![GitHub Logo](https://github.com/EmineSener/Sentiment-Analysis-on-Automobile-Brands/blob/main/readme/comment_number.png)
 
+
 3.Brand-specific daily and total sentiment analysis graphs.
 
+
 ![GitHub Logo](https://github.com/EmineSener/Sentiment-Analysis-on-Automobile-Brands/blob/main/readme/sentiment.png)
+
+
+
+
 
 
 ### [Flask](./Flask/)
@@ -239,6 +252,8 @@ Here are a few analysis charts.
 Graphics created with Flask were turned into a web application that will run on localhost.
 
 A dynamic website was created showing the sentiment results obtained with Flask.
+
+
 
 
 
