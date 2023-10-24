@@ -77,6 +77,8 @@ python app.py
 
 ## Usage 
 
+1.Data Collection And Sentiment Analyse 
+
 When you run the project, you can view the results of the model that has been trained with the data I collected previously. 
 
 However, this project offers more than just that. You have the option to create your dataset by collecting the latest comments and then train the model using your dataset.
@@ -90,10 +92,31 @@ Open the terminal and go to the directory where the project is located.
 Start the Jupyter Notebook server:
 
 ```bash
-   jupyter notebook
+jupyter notebook
 ```
 
 To run cells in Jupyter Notebook, click on the cells and press "Shift+Enter".
+
+2.Web Application with Flask 
+
+First, you need to install Flask on your computer if it is not already installed.
+
+```bash
+pip install Flask
+```
+
+Go to the directory where the "app.py" file is located.
+
+Run the Flask application.
+
+```bash
+python app.py
+```
+
+After launching your Flask application, a URL (typically http://localhost:5000) will be displayed in the terminal or command prompt.
+
+You can then enter this URL into your web browser's address bar and press Enter to access the application.
+
 
 
 ## Documentation
@@ -185,13 +208,42 @@ The outcomes are visualized using Matplotlib and saved for potential use in vari
 You can perform sentiment analysis by running the [sentiment_analyse.ipynb](./MachineLearning/sentiment_analyse.ipynb) file.
 
 The results obtained are saved in the [Scores](./MachineLearning/Scores) directory.
-## Usage
 
-This is the usage section.
+#### Processing for Visualization
+
+Sentiment analysis results will be visualized using Echarts charts in the web application created with Flask.
+
+By running [processing_for_visualization.ipynb](./MachineLearning/processing_for_visualization.ipynb), the analysis results are prepared for use in Echarts.
+
+The results have been stored in the [GraphicData](./MachineLearning/GraphicData) folder.
+
+Here are a few analysis charts.
+
+1.Graph showing daily sentiment scores of all brands.
+
+![GitHub Logo](https://github.com/EmineSener/Sentiment-Analysis-on-Automobile-Brands/blob/main/readme/sentiment_graphic.png)
+
+2.A graph displaying the total comments for each brand.
+
+![GitHub Logo](https://github.com/EmineSener/Sentiment-Analysis-on-Automobile-Brands/blob/main/readme/comment_number.png)
+
+3.Brand-specific daily and total sentiment analysis graphs.
+
+![GitHub Logo](https://github.com/EmineSener/Sentiment-Analysis-on-Automobile-Brands/blob/main/readme/sentiment.png)
+
+
+### [Flask](./Flask/)
+
+Graphics created with Flask were turned into a web application that will run on localhost.
+
+A dynamic website was created showing the sentiment results obtained with Flask.
+
+
 
 ## Features
 
-List of features goes here.
+I have created a static and limited website, allowing you to preview the web application without running the Flask server. You can access the [website](https://eminesener.github.io/SentimentAnalyseBrands/)
+
 
 ## Contributing
 
