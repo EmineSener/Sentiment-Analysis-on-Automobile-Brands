@@ -247,21 +247,6 @@ A dynamic website was created showing the sentiment results obtained with Flask.
 I have created a static and limited website, allowing you to preview the web application without running the Flask server. You can access the [website](https://eminesener.github.io/SentimentAnalyseBrands/)
 
 
-## Resources
-
-Below, you can find the resources that were helpful in the development of this project:
-
-- [Resource Name 1](URL1): Description of the resource.
-- [Resource Name 2](URL2): Description of the resource.
-- [Resource Name 3](URL3): Description of the resource.
-
-## Contributing
-
-Guidelines for contributing to the project.
-
-## License
-
-Information about the project's license.
 
  
  
