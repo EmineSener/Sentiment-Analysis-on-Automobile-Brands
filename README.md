@@ -261,7 +261,9 @@ A dynamic website was created showing the sentiment results obtained with Flask.
 
 I have created a static and limited website, allowing you to preview the web application without running the Flask server. You can access the [website](https://eminesener.github.io/SentimentAnalyseBrands/)
 
+Because it was a sample, separate HTML files for 29 brands couldn't be generated for the static website. In this case, a single page for Mercedes has been created as an example. 
 
+To access pages for other brands, running a Flask application is required.
 
  
  
