@@ -10,8 +10,7 @@ Sentiment Analysis on Automobile Brands is a sentiment analysis project that tha
 3. [Documentation](#documentation)
 4. [Usage](#usage)
 5. [Features](#features)
-6. [Contributing](#contributing)
-7. [License](#license)
+
 
 ## Introduction
 
