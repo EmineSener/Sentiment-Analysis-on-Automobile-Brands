@@ -177,6 +177,7 @@ You have the option to label the unlabeled dataset, which was generated through 
 
 However, it can be stated that manual tagging is the most trustworthy approach for labeling text.
 
+At this stage, I received assistance from the [FLAN](https://github.com/M-Taghizadeh/flan-t5-base-imdb-text-classification/blob/master/01_Fine_Tuning_flan_t5_imdb_text_classification.ipynb).
 
 #### Create Model and Feature Extraction with BERT
 
@@ -194,6 +195,7 @@ Each stage is explained in detail in [create_model_with_bert.ipynb](./MachineLea
 
 [create_model_with_bert.ipynb](./MachineLearning/create_model_with_bert.ipynb) may take some time to run, but since the model is saved as [best_model.h5](./MachineLearning/best_model.h5) after training, you can use the model multiple times without the need to train it again.
 
+At this stage, I received assistance from the [Sentiment_Analyse](https://github.com/akoksal/BERT-Sentiment-Analysis-Turkish/blob/master/BERT%20Features%20with%20Keras.ipynb).
 
 #### Sentiment Analyse 
 
@@ -208,6 +210,7 @@ The outcomes are visualized using Matplotlib and saved for potential use in vari
 You can perform sentiment analysis by running the [sentiment_analyse.ipynb](./MachineLearning/sentiment_analyse.ipynb) file.
 
 The results obtained are saved in the [Scores](./MachineLearning/Scores) directory.
+
 
 #### Processing for Visualization
 
@@ -244,6 +247,14 @@ A dynamic website was created showing the sentiment results obtained with Flask.
 
 I have created a static and limited website, allowing you to preview the web application without running the Flask server. You can access the [website](https://eminesener.github.io/SentimentAnalyseBrands/)
 
+
+## Resources
+
+Below, you can find the resources that were helpful in the development of this project:
+
+- [Resource Name 1](URL1): Description of the resource.
+- [Resource Name 2](URL2): Description of the resource.
+- [Resource Name 3](URL3): Description of the resource.
 
 ## Contributing
 
